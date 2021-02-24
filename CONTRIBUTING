@@ -1,0 +1,30 @@
+*****
+
+Contributor’s guide for the SLI Docs VS Code extension
+
+Created by Alexander Nicholi.
+Copyright © 2021 Aquefir.
+
+*****
+
+Here is the functional model of how a user’s SLI docs in doc/ and source code
+in src/ and include/ ends up in their editor:
+
+1. sli-tool parses all files in doc/. It attempts to make a directory tree out
+   of all the record pathnames too.
+2. Another program parses the user’s source files for all of the declarations.
+   This probably needs libclang for an AST of C and C++ code.
+3. #include analysis is done to make a map of which files actually know about
+   which declarations.
+4. Once all the details about the project and its docs are sorted out, it is
+   made available through some API to extensions. This is what src/provider.ts
+   will wrap.
+5. src/main.ts will take the provider module, stuff it with input source text,
+   and receive IntelliSense-like documentation from the SLI files associated.
+   Like magic.
+
+NOTE: This repository does not include code for steps 1-3. That will probably
+be made available at <https://github.com/aquefir/sli-tool>. Due to the vast
+amount of language support that will eventually be demanded from the backend,
+separating it from this frontend is paramount, especially for future support
+of other editors.

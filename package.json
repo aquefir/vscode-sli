@@ -1,0 +1,30 @@
+{
+	"name": "vscode-sli",
+	"version": "0.0.0",
+	"description": "SLI docs for VS Code.",
+	"main": "build/main.js",
+	"scripts": {
+		"build": "tsc -p ./"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aquefir/vscode-sli.git"
+	},
+	"keywords": [
+		"documentation",
+		"sli",
+		"context",
+		"intellisense"
+	],
+	"author": "Aquefir",
+	"license": "MPL-2.0",
+	"bugs": {
+		"url": "https://github.com/aquefir/vscode-sli/issues"
+	},
+	"homepage": "https://github.com/aquefir/vscode-sli#readme",
+	"devDependencies": {
+		"@types/node": "~12",
+		"@types/vscode": "~1",
+		"typescript": "~4"
+	}
+}

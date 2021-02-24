@@ -1,0 +1,53 @@
+*****
+
+SLI Docs for VS Code
+
+Created by Alexander Nicholi.
+Copyright © 2021 Aquefir.
+
+*****
+
+1. WHAT IS THIS?
+
+This is an editor extension for VS Code that provides contextual documentation
+of SLI docs for APIs and programs as they are interacted with. It reads in the
+necessary information from SLI files, as per the protocol defined in ADP 2,
+parses them, and delivers them to the API consumer when they need them most.
+
+2. WHY?
+
+Programmers have spent a lot of time reading documentation, and with so much
+innovation coming at the hands of interactivity, it is an inevitability that
+the act of reading on computers will trend towards it. Microsoft’s IntelliSense
+is clear evidence of this. There is a simple truth: books are not the most
+efficient mediums of information. When somebody wants the information they
+need, and nothing more, in as little time as possible, the value proposition
+of such a mechanism becomes obvious.
+
+3. THE FORMAT
+
+SLI itself is an ASCII-friendly format that is designed to be easy to read and
+write from the perspective of humans and computers alike. It provides no rich
+text facilities, intending docs to be ultimately rendered in the same
+monospace font code exists in, and all of the escape sequences are ones anyone
+familiar with string literals in almost any language can understand without
+additional learning. It offers a flat hiearchy that is similar in structure to
+tarballs, with record paths beginning on an unindented line and all indented
+lines following it comprising the record’s contents. Whitespace and newlines
+are otherwise insignificant. Simplicity is taken seriously, because there will
+never be an extension for everyone, and someone has to read the docs anyway,
+programmatically or not.
+
+4. WHY VS CODE?
+
+VS Code was supported first because it is the editor of its author, and also
+because it seems to be “the editor of our times”. Atom and Emacs are also
+serious secondary contenders for SLI support. After all, documentation is
+best delivered this way - ideally, the text fallback is just that: a fallback.
+The closer documentation can be brought to programmers, the better their code
+is going to be. Simple as.
+
+5. REFERENCES & ADDITIONAL READING
+
+Nicholi, Alexander. “Slick documentation format.” ADP 2.
+	<https://aquefir.co/adp2>
